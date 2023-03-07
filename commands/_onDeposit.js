@@ -1,16 +1,23 @@
 /*CMD
   command: /onDeposit
   help: 
-  need_reply: 
+  need_reply: false
   auto_retry_time: 
   folder: 
-  answer: 
-  keyboard: 
+
+  <<ANSWER
+
+  ANSWER
+
+  <<KEYBOARD
+
+  KEYBOARD
   aliases: 
 CMD*/
 
-var error = options.result
-if(error.error){
-return Bot.sendMessage(error.message)
+var error = options.result.error
+if (error) {
+  return Bot.sendMessage(options.result.error.message)
 }
 Bot.inspect(options)
+

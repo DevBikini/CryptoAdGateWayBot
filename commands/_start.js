@@ -4,14 +4,8 @@
   need_reply: false
   auto_retry_time: 
   folder: 
-
-  <<ANSWER
-
-  ANSWER
-
-  <<KEYBOARD
-
-  KEYBOARD
+  answer: 
+  keyboard: 
   aliases: back
 CMD*/
 
@@ -20,4 +14,3 @@ var text =
 var keyboard =
   "💰 Balance \n➖ Withdraw,➕ Deposit\n📋 History, Generate/Reset\n💸 Transfer"
 Bot.sendKeyboard(keyboard, text, { disable_web_page_preview: true })
-
