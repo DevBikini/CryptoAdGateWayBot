@@ -1,18 +1,24 @@
 /*CMD
   command: ➖ Withdraw
   help: 
-  need_reply: 
+  need_reply: false
   auto_retry_time: 
   folder: 
-  answer: 
-  keyboard: 
+
+  <<ANSWER
+
+  ANSWER
+
+  <<KEYBOARD
+
+  KEYBOARD
   aliases: 
 CMD*/
 
 var api_key = "YOUR API KEY HERE"
 var secret_key = "SECRET KEY HERE"
 Libs.CryptoAdGateWayBot.Withdraw({
-  api_key:api_key,
+  api_key: api_key,
   secret_key: secret_key,
   currency: "DGB",
   amount: "0.006",
@@ -20,5 +26,4 @@ Libs.CryptoAdGateWayBot.Withdraw({
   user: user.id,
   success: "/onWithdraw"
 })
-//1. You need to Run /setup
-//2. Setup your API key and secret Key in admin panel
+
