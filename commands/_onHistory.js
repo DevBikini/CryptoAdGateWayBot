@@ -4,14 +4,8 @@
   need_reply: false
   auto_retry_time: 
   folder: 
-
-  <<ANSWER
-
-  ANSWER
-
-  <<KEYBOARD
-
-  KEYBOARD
+  answer: 
+  keyboard: 
   aliases: 
 CMD*/
 
@@ -20,4 +14,3 @@ if (error) {
   return Bot.sendMessage(options.result.error.message)
 }
 Bot.inspect(options)
-
